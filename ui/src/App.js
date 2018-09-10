@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 async function loadGreeting() {
-  const response = await fetch('http://localhost:9000/graphql', {
+  const response = await fetch('http://localhost:3000/graphql', {
     method: 'POST',
     headers: {'content-type': 'application/json'},
     body: JSON.stringify({query: '{ greeting }'})
