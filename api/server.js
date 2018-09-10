@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const { makeExecutableSchema } = require('graphql-tools')
-const port = 9000
+const port = 3000
 const app = express()
 
 const typeDefs = `
