@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { loadPokemon } from './requests';
+
+import FakeData from './fake-database'
 
 export default class FeaturedPokemon extends Component {
   constructor(props) {
@@ -7,10 +8,9 @@ export default class FeaturedPokemon extends Component {
     this.state = {pokemon: null};
   }
 
-  async componentDidMount() {
-    const {Pokemon} = await loadPokemon(this.props.featured);
+  componentDidMount() {
+    const Pokemon = FakeData.pokemon.find(mon => mon.id === this.props.featured);
     this.setState({pokemon: Pokemon});
-    console.log(Pokemon)
   }
 
   render() {
